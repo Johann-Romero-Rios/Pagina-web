@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burgers · Hamburguesas caseras</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/estilos.css">
+</head>
+<body>
+
+<a class="saltar-contenido" href="#catalogo">Ir al catálogo</a>
+
+<header class="barra-superior" id="inicio">
+  <div class="barra-superior__envoltura">
+
+    <a class="marca" href="#inicio" aria-label="Burgers, inicio">
+      <svg class="marca__pan" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M6 30 C6 16, 18 8, 32 8 C46 8, 58 16, 58 30 Z" fill="var(--color-mostaza)"/>
+        <circle cx="20" cy="18" r="1.6" fill="var(--color-crema)"/>
+        <circle cx="32" cy="14" r="1.6" fill="var(--color-crema)"/>
+        <circle cx="44" cy="18" r="1.6" fill="var(--color-crema)"/>
+        <circle cx="26" cy="22" r="1.6" fill="var(--color-crema)"/>
+        <circle cx="38" cy="22" r="1.6" fill="var(--color-crema)"/>
+        <rect x="6" y="30" width="52" height="6" rx="3" fill="var(--color-ladrillo)"/>
+        <rect x="4" y="40" width="56" height="8" rx="4" fill="var(--color-oliva)"/>
+        <path d="M6 52 C6 58, 18 60, 32 60 C46 60, 58 58, 58 52 Z" fill="var(--color-mostaza)"/>
+      </svg>
+      <span class="marca__texto">Burgers<br></span>
+    </a>
+
+    <nav class="navegacion-principal" aria-label="Secciones del sitio">
+      <a href="#catalogo">Hamburguesas</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#pie">Visítanos</a>
+    </nav>
+
+    <div class="acciones-barra">
+      <button class="boton-icono" id="abrir-orden" aria-haspopup="dialog" aria-controls="panel-orden">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/></svg>
+        <span class="contador-pedido" id="contador-pedido">0</span>
+        <span class="visualmente-oculto">Tu orden</span>
+      </button>
+      <button class="boton-icono boton-icono--solo-movil" id="abrir-menu-movil" aria-haspopup="dialog" aria-controls="panel-menu-movil">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span class="visualmente-oculto">Abrir menú</span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+  <section class="portada">
+    <img src="IMG/fondo.jpg" alt="" class="portada__imagen" aria-hidden="true">
+    <div class="portada__velo"></div>
+    <div class="portada__contenido">
+      <p class="portada__antetitulo">Hechas a mano · Ingredientes del día</p>
+      <h1 class="portada__titulo">La hamburguesa que estabas buscando ya tiene mesa reservada</h1>
+      <p class="portada__bajada">Carne molida en el local, pan horneado cada mañana y salsas que no salen de una bolsa de plástico. Así de simple.</p>
+      <a href="#catalogo" class="boton boton--relleno">Ver el catálogo</a>
+    </div>
+  </section>
+
+  <section class="catalogo" id="catalogo">
+    <div class="catalogo__envoltura">
+
+      <div class="encabezado-seccion">
+        <p class="encabezado-seccion__eyebrow">Menú principal</p>
+        <h2 class="encabezado-seccion__titulo">Elige, agrega, repite</h2>
+      </div>
+
+      <div class="catalogo__cuerpo">
+
+        <ul class="rejilla-productos" id="rejilla-productos">
+          <li class="tarjeta-producto" data-nombre="Hamburguesa Chipotle Ahumada" data-precio="120">
+            <img src="IMG/Hamburgesa_chipotle.jpg" alt="Hamburguesa con salsa chipotle ahumada" loading="lazy">
+            <div class="tarjeta-producto__cuerpo">
+              <h3>Chipotle Ahumada</h3>
+              <p class="tarjeta-producto__precio">$120</p>
+              <button class="boton boton--borde boton-agregar">Agregar</button>
+            </div>
+          </li>
+
+          <li class="tarjeta-producto" data-nombre="Hamburguesa Clásica de la Casa" data-precio="95">
+            <img src="IMG/Hamburgesa_clasica.jpg" alt="Hamburguesa clásica con lechuga, tomate y cebolla" loading="lazy">
+            <div class="tarjeta-producto__cuerpo">
+              <h3>Clásica de la Casa</h3>
+              <p class="tarjeta-producto__precio">$95</p>
+              <button class="boton boton--borde boton-agregar">Agregar</button>
+            </div>
+          </li>
+
+          <li class="tarjeta-producto" data-nombre="Hamburguesa con Tocino Crujiente" data-precio="110">
+            <img src="IMG/Hamburgesa_con_tocino.jpg" alt="Hamburguesa con tocino crujiente y queso fundido" loading="lazy">
+            <div class="tarjeta-producto__cuerpo">
+              <h3>Tocino Crujiente</h3>
+              <p class="tarjeta-producto__precio">$110</p>
+              <button class="boton boton--borde boton-agregar">Agregar</button>
+            </div>
+          </li>
+
+          <li class="tarjeta-producto" data-nombre="Doble Carne Especial" data-precio="145">
+            <img src="IMG/Hamburgesa_doble_carne.jpg" alt="Hamburguesa doble carne con dos capas de queso" loading="lazy">
+            <div class="tarjeta-producto__cuerpo">
+              <h3>Doble Carne Especial</h3>
+              <p class="tarjeta-producto__precio">$145</p>
+              <button class="boton boton--borde boton-agregar">Agregar</button>
+            </div>
+          </li>
+
+          <li class="tarjeta-producto" data-nombre="Trío de Mini Hamburguesas" data-precio="85">
+            <img src="IMG/Mini_hamburgesas.jpg" alt="Charola de mini hamburguesas para compartir" loading="lazy">
+            <div class="tarjeta-producto__cuerpo">
+              <h3>Trío de Minis</h3>
+              <p class="tarjeta-producto__precio">$85</p>
+              <button class="boton boton--borde boton-agregar">Agregar</button>
+            </div>
+          </li>
+
+          <li class="tarjeta-producto" data-nombre="Combo Tres Amigos" data-precio="190">
+            <img src="IMG/Tres_hamburgesas.jpg" alt="Tres hamburguesas gourmet servidas juntas" loading="lazy">
+            <div class="tarjeta-producto__cuerpo">
+              <h3>Combo Tres Amigos</h3>
+              <p class="tarjeta-producto__precio">$190</p>
+              <button class="boton boton--borde boton-agregar">Agregar</button>
+            </div>
+          </li>
+        </ul>
+
+        <aside class="resumen-orden" aria-label="Resumen de tu orden">
+          <div class="resumen-orden__cabecera">
+            <h3>Tu orden</h3>
+            <span class="resumen-orden__total" id="total-resumen">$0</span>
+          </div>
+          <ol class="resumen-orden__lista" id="lista-resumen">
+            <li class="resumen-orden__vacio">Aún no agregaste nada</li>
+          </ol>
+          <div class="resumen-orden__pie">
+            <button class="boton boton--texto" id="quitar-ultimo">Quitar el último</button>
+            <button class="boton boton--texto boton--texto-alerta" id="vaciar-orden">Vaciar orden</button>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="opiniones" id="opiniones">
+    <div class="opiniones__envoltura">
+
+      <div class="encabezado-seccion encabezado-seccion--claro">
+        <p class="encabezado-seccion__eyebrow">Comunidad</p>
+        <h2 class="encabezado-seccion__titulo">Lo que cuentan en la mesa de al lado</h2>
+      </div>
+
+      <ul class="rejilla-opiniones" id="rejilla-opiniones">
+        <li class="tarjeta-opinion">
+          <div class="tarjeta-opinion__calificacion" aria-label="5 de 5 estrellas">★★★★★</div>
+          <p class="tarjeta-opinion__texto">La Chipotle Ahumada se volvió mi pedido fijo. El pan se nota recién horneado y la carne llega jugosa, no seca como en otros lados.</p>
+          <p class="tarjeta-opinion__autor">Noelle Silva</p>
+        </li>
+
+        <li class="tarjeta-opinion">
+          <div class="tarjeta-opinion__calificacion" aria-label="4 de 5 estrellas">★★★★☆</div>
+          <p class="tarjeta-opinion__texto">El sistema para armar tu orden en la página es muy práctico. La Clásica nunca decepciona y el servicio mejoró bastante.</p>
+          <p class="tarjeta-opinion__autor">Perseo Jackson</p>
+        </li>
+
+        <li class="tarjeta-opinion">
+          <div class="tarjeta-opinion__calificacion" aria-label="5 de 5 estrellas">★★★★★</div>
+          <p class="tarjeta-opinion__texto">La de tocino crujiente es justo lo que esperas y un poco más. Se ha convertido en mi parada favorita después del trabajo.</p>
+          <p class="tarjeta-opinion__autor">Annabeth Chase</p>
+        </li>
+      </ul>
+
+      <form class="formulario-opinion" id="formulario-opinion" novalidate>
+        <h3>Cuéntanos cómo te fue</h3>
+
+        <div class="campo">
+          <label for="campo-nombre">Tu nombre</label>
+          <input type="text" id="campo-nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+        </div>
+
+        <div class="campo">
+          <span class="campo__etiqueta-grupo">Calificación</span>
+          <div class="selector-estrellas" id="selector-estrellas" role="radiogroup" aria-label="Selecciona una calificación de 1 a 5 estrellas">
+            <button type="button" class="estrella" data-puntos="1" role="radio" aria-checked="false" aria-label="1 estrella">★</button>
+            <button type="button" class="estrella" data-puntos="2" role="radio" aria-checked="false" aria-label="2 estrellas">★</button>
+            <button type="button" class="estrella" data-puntos="3" role="radio" aria-checked="false" aria-label="3 estrellas">★</button>
+            <button type="button" class="estrella" data-puntos="4" role="radio" aria-checked="false" aria-label="4 estrellas">★</button>
+            <button type="button" class="estrella" data-puntos="5" role="radio" aria-checked="false" aria-label="5 estrellas">★</button>
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="campo-texto">Tu opinión</label>
+          <textarea id="campo-texto" name="texto" rows="3" placeholder="¿Qué tal estuvo tu hamburguesa?" required></textarea>
+        </div>
+
+        <button type="submit" class="boton boton--relleno boton--ancho-completo">Publicar opinión</button>
+      </form>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie" id="pie">
+  <div class="pie__envoltura">
+    <p class="pie__direccion">
+      <a href="https://maps.app.goo.gl/yaPejWYiphzxY2Q18" target="_blank" rel="noopener noreferrer">Tlalnepantla, Estado de México</a>
+    </p>
+    <p class="pie__telefono"><a href="tel:+525561317463">+52 55 6131 7463</a></p>
+    <nav class="pie__redes" aria-label="Redes sociales">
+      <a href="#" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V6h-3c-2 0-3.5 1.5-3.5 3.5V11H8v3h2.5v6h3v-6H16l.5-3h-3V9.8c0-.6.4-.8.8-.8Z" fill="currentColor"/></svg>
+      </a>
+      <a href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/yuritsa-paez-a85920121/" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8" cy="8.5" r="1.3" fill="currentColor"/><path d="M6.7 11v6.5M17.3 17.5V13.8c0-1.6-.8-2.5-2.1-2.5-1 0-1.7.6-2 1.2v-1H10v6h2.2v-3.4c0-.5.1-1 .9-1 .7 0 .9.5.9 1.1V17.5Z" fill="currentColor"/></svg>
+      </a>
+    </nav>
+    <p class="pie__derechos">© 2025 Burger Friends</p>
+  </div>
+</footer>
+
+<!-- Panel deslizable de la orden (versión propia, sin Bootstrap) -->
+<div class="panel-lateral" id="panel-orden" role="dialog" aria-modal="true" aria-label="Tu orden">
+  <div class="panel-lateral__cabecera">
+    <h3>Tu orden</h3>
+    <button class="boton-icono" id="cerrar-orden" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <ol class="panel-lateral__lista" id="lista-panel-orden">
+    <li class="resumen-orden__vacio">Aún no agregaste nada</li>
+  </ol>
+  <div class="panel-lateral__pie">
+    <span class="panel-lateral__total" id="total-panel">$0</span>
+    <div class="panel-lateral__botones">
+      <button class="boton boton--texto" id="quitar-ultimo-panel">Quitar último</button>
+      <button class="boton boton--texto boton--texto-alerta" id="vaciar-orden-panel">Vaciar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Panel de navegación para pantallas pequeñas -->
+<div class="panel-lateral panel-lateral--izquierda" id="panel-menu-movil" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <div class="panel-lateral__cabecera">
+    <h3>Menú</h3>
+    <button class="boton-icono" id="cerrar-menu-movil" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <nav class="panel-lateral__nav">
+    <a href="#inicio">Inicio</a>
+    <a href="#catalogo">Hamburguesas</a>
+    <a href="#opiniones">Opiniones</a>
+    <a href="#pie">Visítanos</a>
+  </nav>
+</div>
+
+<div class="fondo-oscurecido" id="fondo-oscurecido"></div>
+
+<script src="JS/tienda.js"></script>
+</body>
+</html>
